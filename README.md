@@ -1,1 +1,1 @@
-# sendgrid-service
+# sendgrid-utils
