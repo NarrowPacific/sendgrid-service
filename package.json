@@ -1,0 +1,21 @@
+{
+  "name": "sendgrid-utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vu Nguyen <vu@narrowpacific.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/NarrowPacific/sendgrid-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarrowPacific/sendgrid-utils.git"
+  },
+  "keywords": [
+    "sendgrid",
+    "email"
+  ],
+  "dependencies": {
+    "@sendgrid/client": "^7.7.0",
+    "@sendgrid/mail": "^7.7.0"
+  },
+  "devDependencies": {}
+}
