@@ -1,16 +1,23 @@
 const sgMail = require('@sendgrid/mail');
 
-async function sendEmail(sgApiKey, fromEmail, toEmail, subject, content) {
+async function sendEmails(sgApiKey, fromEmail, toEmails, subject, content) {
   const msg = {
-      to: toEmail,
-      from: fromEmail,
-      subject: subject,
-      html: content,
+    to: toEmails,
+    from: fromEmail,
+    subject,
+    text: content,
+    html: content,
   };
+
   sgMail.setApiKey(sgApiKey);
-  return sgMail.send(msg);
+
+  if (Array.isArray(toEmails)) {
+    return sgMail.sendMultiple(msg);
+  } else {
+    return sgMail.send(msg);
+  }
 }
 
 module.exports = {
-  sendEmail,
+  sendEmails,
 };
